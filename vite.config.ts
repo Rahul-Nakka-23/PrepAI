@@ -6,9 +6,9 @@ export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
     plugins: [react()],
+    base: process.env.VITE_BASE_PATH || "/PrepAI",
     define: {
       'import.meta.env.VITE_GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-      'import.meta.env.VITE_OPENAI_API_KEY': JSON.stringify(env.OPENAI_API_KEY),
       'import.meta.env.VITE_AI_PROVIDER': JSON.stringify(env.AI_PROVIDER || 'gemini')
     },
     resolve: {
