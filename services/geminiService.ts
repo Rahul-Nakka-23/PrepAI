@@ -3,7 +3,6 @@ declare global {
     interface ImportMeta {
         env: {
             VITE_GEMINI_API_KEY?: string;
-            VITE_OPENAI_API_KEY?: string;
             VITE_AI_PROVIDER?: string;
         };
     }
